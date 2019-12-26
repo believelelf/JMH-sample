@@ -63,12 +63,17 @@ public class JMHSample_34_SafeLooping {
      * Sometimes, however, one needs to traverse through several elements in a dataset.
      * This is hard to do without loops, and therefore we need to devise a scheme for
      * safe looping.
+     * JMHSample_11_Loops警告在@Benchmark方法中使用循环的危险。
+     * 然而，有时需要遍历数据集中的几个元素。
+     * 没有循环就很难做到这一点，因此我们需要设计一个安全循环的方案。
      */
 
     /*
      * Suppose we want to measure how much it takes to execute work() with different
      * arguments. This mimics a frequent use case when multiple instances with the same
      * implementation, but different data, is measured.
+     * 假设我们想要测量使用不同参数执行work()需要多少时间。
+     * 这模拟了在测量具有相同实现但数据不同的多个实例时的一个常见用例。
      */
 
     static final int BASE = 42;
@@ -81,6 +86,8 @@ public class JMHSample_34_SafeLooping {
      * Every benchmark requires control. We do a trivial control for our benchmarks
      * by checking the benchmark costs are growing linearly with increased task size.
      * If it doesn't, then something wrong is happening.
+     * 每个基准测试都需要控制。通过检查基准测试成本随任务大小的增加而线性增长，
+     * 我们对基准测试进行了简单的控制。如果没有，那就是出了问题。
      */
 
     @Param({"1", "10", "100", "1000"})
@@ -101,6 +108,9 @@ public class JMHSample_34_SafeLooping {
      * work. A sufficiently smart compiler will inline work(), and figure out only the last
      * work() call needs to be evaluated. Indeed, if you run it with varying $size, the score
      * will stay the same!
+     * 首先，显然是错误的方法:将结果“保存”到局部变量中是行不通的。
+     * 一个足够智能的编译器将内联work()，并计算出只需要计算最后一次work()调用。
+     * 实际上，如果您使用不同的$size运行它，分数将保持不变!
      */
 
     @Benchmark
@@ -113,15 +123,17 @@ public class JMHSample_34_SafeLooping {
     }
 
     /*
-     * Second, another wrong way: "accumulating" the result into a local variable. While
-     * it would force the computation of each work() method, there are software pipelining
-     * effects in action, that can merge the operations between two otherwise distinct work()
-     * bodies. This will obliterate the benchmark setup.
+     * 第二，另一种错误的方法:将结果“累积”为局部变量。
+     * 虽然这将强制每个work()方法的计算，但是有软件管道的作用，
+     * 可以在两个不同的work()主体之间合并操作。这将消除基准设置。
      *
      * In this example, HotSpot does the unrolled loop, merges the $BASE operands into a single
      * addition to $acc, and then does a bunch of very tight stores of $x-s. The final performance
      * depends on how much of the loop unrolling happened *and* how much data is available to make
      * the large strides.
+     * 在本例中，HotSpot执行展开的循环，将$BASE操作数合并到$acc的单个加法中，
+     * 然后执行一系列非常紧凑的$x-s存储。
+     * 最终的性能取决于循环展开发生了多少次*和*有多少数据可用来实现大的跨越。
      */
 
     @Benchmark
@@ -139,6 +151,10 @@ public class JMHSample_34_SafeLooping {
      * every work() call in full. (We would normally like to care about several concurrent work()
      * computations at once, but the memory effects from Blackhole.consume() prevent those optimization
      * on most runtimes).
+     * 现在，让我们看看如何正确地测量这些东西。打破合并的一个非常直接的方法是将每个结果沉入blackhole。
+     * 这将迫使运行时完全计算每个work()调用。
+     * (我们通常会同时关心几个并发的work()计算，
+     * 但是blackhole.consumption()的内存影响会在大多数运行时阻止这些优化)。
      */
 
     @Benchmark
@@ -150,13 +166,18 @@ public class JMHSample_34_SafeLooping {
 
     /*
      * DANGEROUS AREA, PLEASE READ THE DESCRIPTION BELOW.
+     * 危险区域，请阅读下面的说明。
      *
      * Sometimes, the cost of sinking the value into a Blackhole is dominating the nano-benchmark score.
      * In these cases, one may try to do a make-shift "sinker" with non-inlineable method. This trick is
      * *very* VM-specific, and can only be used if you are verifying the generated code (that's a good
      * strategy when dealing with nano-benchmarks anyway).
+     * 有时，将价值注入Blackhole的成本主导着纳米基准测试的分数。
+     * 在这些情况下，一个人可以尝试做一个临时转移“下沉”与不可链接的方法。
+     * 这个技巧是特定于vm的，只有在验证生成的代码时才能使用(无论如何，这是处理nano基准测试的好策略)。
      *
      * You SHOULD NOT use this trick in most cases. Apply only where needed.
+     * 你不应该在大多数情况下使用这个技巧。只适用于需要的地方。
      */
 
     @Benchmark

@@ -88,6 +88,8 @@ public class JMHSample_25_API_GA {
         // These are our base options. We will mix these options into the
         // measurement runs. That is, all measurement runs will inherit these,
         // see how it's done below.
+        // 这些是我们的基本选择。我们将把这些选项混合到度量运行中。
+        // 也就是说，所有的度量运行都将继承这些，参见下面的步骤。
         Options baseOpts = new OptionsBuilder()
                 .include(JMHSample_25_API_GA.class.getName())
                 .warmupTime(TimeValue.milliseconds(200))
@@ -99,6 +101,7 @@ public class JMHSample_25_API_GA {
                 .build();
 
         // Initial population
+        // 初始化入口
         Population pop = new Population();
         final int POPULATION = 10;
         for (int c = 0; c < POPULATION; c++) {
@@ -106,16 +109,20 @@ public class JMHSample_25_API_GA {
         }
 
         // Make a few rounds of optimization:
+        // 做几轮优化:
         final int GENERATIONS = 100;
         for (int g = 0; g < GENERATIONS; g++) {
             System.out.println("Entering generation " + g);
 
             // Get the baseline score.
+            // 获取基线分数
             // We opt to remeasure it in order to get reliable current estimate.
+            // 为了得到可靠的趋势估计，我们选择重新测量它
             RunResult runner = new Runner(baseOpts).runSingle();
             Result baseResult = runner.getPrimaryResult();
 
             // Printing a nice table...
+            // 打印分数表
             System.out.println("---------------------------------------");
             System.out.printf("Baseline score: %10.2f %s%n",
                     baseResult.getScore(),
@@ -135,12 +142,14 @@ public class JMHSample_25_API_GA {
             Population newPop = new Population();
 
             // Copy out elite solutions
+            // 复制精英解决方案
             final int ELITE = 2;
             for (Chromosome c : pop.getAll().subList(0, ELITE)) {
                 newPop.addChromosome(c);
             }
 
             // Cross-breed the rest of new population
+            // 与其他新种群混合
             while (newPop.size() < pop.size()) {
                 Chromosome p1 = pop.selectToBreed();
                 Chromosome p2 = pop.selectToBreed();

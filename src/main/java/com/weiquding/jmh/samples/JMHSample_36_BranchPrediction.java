@@ -51,15 +51,23 @@ public class JMHSample_36_BranchPrediction {
 
     /*
      * This sample serves as a warning against regular data sets.
+     * 这个示例是对常规数据集的一个警告。
      *
      * It is very tempting to present a regular data set to benchmark, either due to
      * naive generation strategy, or just from feeling better about regular data sets.
      * Unfortunately, it frequently backfires: the regular datasets are known to be
      * optimized well by software and hardware. This example exploits one of these
      * optimizations: branch prediction.
+     * 将常规数据集呈现给benchmark是非常诱人的，这可能是由于幼稚的生成策略，
+     * 也可能只是因为对常规数据集感觉更好。
+     * 不幸的是，它经常事与愿违:众所周知，通过软件和硬件可以很好地优化常规数据集。
+     * 本例使用了其中一种优化:分支预测。
+     *
      *
      * Imagine our benchmark selects the branch based on the array contents, as
      * we are streaming through it:
+     *
+     * 想象我们的基准选择基于数组内容的分支，因为我们通过它:
      */
 
     private static final int COUNT = 1024 * 1024;

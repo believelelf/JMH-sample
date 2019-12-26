@@ -63,6 +63,10 @@ public class JMHSample_28_BlackholeHelpers {
      * you can request the black hole straight in the helper method signature.
      * This applies to both @Setup and @TearDown methods, and also to other
      * JMH infrastructure objects, like Control.
+     * 有时候，您需要的black hole 不是在@Benchmark方法中，
+     * 而是在helper方法中，因为您希望将它传递给在helper方法中实例化的具体实现。
+     * 在这种情况下，您可以在helper方法签名中直接请求black hole。
+     * 这适用于@Setup和@TearDown方法，也适用于其他JMH基础结构对象，比如Control。
      *
      * Below is the variant of {@link org.openjdk.jmh.samples.JMHSample_08_DeadCode}
      * test, but wrapped in the anonymous classes.

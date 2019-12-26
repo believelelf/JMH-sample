@@ -63,6 +63,7 @@ public class JMHSample_29_StatesDAG {
     /**
      * WARNING:
      * THIS IS AN EXPERIMENTAL FEATURE, BE READY FOR IT BECOME REMOVED WITHOUT NOTICE!
+     * 这是一个实验性的功能，准备好了吗?
      */
 
     /**
@@ -71,11 +72,16 @@ public class JMHSample_29_StatesDAG {
      * linking @States in directed acyclic graphs (DAGs) by referencing @States
      * in helper method signatures. (Note that {@link org.openjdk.jmh.samples.JMHSample_28_BlackholeHelpers}
      * is just a special case of that.
+     * 当基准状态被一组@States更清晰地描述，并且这些@States相互引用时，会出现一些奇怪的情况。
+     * JMH允许通过引用助手方法签名中的@States来链接有向无环图(DAGs)中的@States。
+     * 注意{@link org.openjdk.jmh.samples。JMHSample_28_BlackholeHelpers}只是一个特例。
      *
      * Following the interface for @Benchmark calls, all @Setups for
      * referenced @State-s are fired before it becomes accessible to current @State.
      * Similarly, no @TearDown methods are fired for referenced @State before
      * current @State is done with it.
+     * 在@Benchmark调用的接口之后，在当前@State可以访问之前，将触发引用的@State的所有@Setups。
+     * 类似地，在使用当前@State之前，不会对引用的@State触发@TearDown方法。
      */
 
     /*
@@ -100,6 +106,8 @@ public class JMHSample_29_StatesDAG {
      * poll their own instances of Counter to work with. However, it should only
      * be done once, and therefore, Local state caches it after requesting the
      * counter from Shared state.
+     * 共享状态维护一组计数器，工作线程应该轮询它们自己要使用的计数器实例。
+     * 但是，它应该只执行一次，因此，本地状态在从共享状态请求计数器之后缓存它。
      */
 
     @State(Scope.Benchmark)

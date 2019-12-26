@@ -57,6 +57,8 @@ public class JMHSample_30_Interrupts {
      * JMH can also detect when threads are stuck in the benchmarks, and try
      * to forcefully interrupt the benchmark thread. JMH tries to do that
      * when it is arguably sure it would not affect the measurement.
+     * JMH还可以检测什么时候线程卡在基准中，并尝试强制中断基准线程。
+     * 当JMH可以确定它不会影响测量时，它就会尝试这样做。
      */
 
     /*
@@ -70,9 +72,18 @@ public class JMHSample_30_Interrupts {
      * JMH will start issuing interrupts after the default or user-specified timeout
      * had been reached.
      *
+     * 在本例中，我们希望度量ArrayBlockingQueue的简单性能特征。不幸的是，
+     * 在没有管理支持的情况下这样做会导致其中一个线程死锁，
+     * 因为take/put的执行不是完全匹配的。幸运的是，这两种方法对中断的响应都很好，
+     * 因此我们可以依赖JMH来终止测量。尽管如此，JMH还是会将中断动作通知用户，
+     * 这样用户就可以看到这些中断是否影响了测量。
+     * 在达到默认或用户指定的超时之后，JMH将开始发出中断。
+     *
      * This is a variant of org.openjdk.jmh.samples.JMHSample_18_Control, but without
      * the explicit control objects. This example is suitable for the methods which
      * react to interrupts gracefully.
+     * 这是org.openjdk. jhm .samples.JMHSample_18_Control的变体。
+     * 但是没有显式的控制对象。此示例适用于对中断做出优雅响应的方法。
      */
 
     private BlockingQueue<Integer> q;

@@ -51,8 +51,11 @@ public class JMHSample_37_CacheAccess {
     /*
      * This sample serves as a warning against subtle differences in cache access patterns.
      *
+     * 此示例警告缓存访问模式中的细微差异
+     *
      * Many performance differences may be explained by the way tests are accessing memory.
      * In the example below, we walk the matrix either row-first, or col-first:
+     * 许多性能差异可以通过测试访问内存的方式来解释。在下面的例子中，我们要么行第一，要么列第一:
      */
 
     private final static int COUNT = 4096;

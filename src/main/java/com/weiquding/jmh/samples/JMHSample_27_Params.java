@@ -60,6 +60,8 @@ public class JMHSample_27_Params {
      * In many cases, the experiments require walking the configuration space
      * for a benchmark. This is needed for additional control, or investigating
      * how the workload performance changes with different settings.
+     * 在许多情况下，实验需要遍历配置空间以进行基准测试。
+     * 这对于附加控制或研究工作负载性能如何随不同设置而变化是必需的。
      */
 
     @Param({"1", "31", "65", "101", "103"})

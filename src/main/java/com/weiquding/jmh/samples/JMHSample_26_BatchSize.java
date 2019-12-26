@@ -54,19 +54,23 @@ public class JMHSample_26_BatchSize {
      * Sometimes you need to evaluate operation which doesn't have
      * the steady state. The cost of a benchmarked operation may
      * significantly vary from invocation to invocation.
-     *
+     * 有时你需要评估一个没有稳定状态的操作。基准化操作的成本在不同的调用之间可能存在显著差异。
      * In this case, using the timed measurements is not a good idea,
      * and the only acceptable benchmark mode is a single shot. On the
      * other hand, the operation may be too small for reliable single
      * shot measurement.
-     *
+     * 在这种情况下，使用定时测量不是一个好主意，唯一可接受的基准模式是单次测量。
+     * 另一方面，操作可能太小，无法进行可靠的单发测量。
      * We can use "batch size" parameter to describe the number of
      * benchmark calls to do per one invocation without looping the method
      * manually and protect from problems described in JMHSample_11_Loops.
+     * 我们可以使用“批处理大小”参数来描述每次调用要执行的基准测试调用的数量，
+     * 而无需手动循环该方法，并且可以避免出现JMHSample_11_Loops中描述的问题。
      */
 
     /*
      * Suppose we want to measure insertion in the middle of the list.
+     * 假设我们要测量列表中间的插入。
      */
 
     List<String> list = new LinkedList<>();

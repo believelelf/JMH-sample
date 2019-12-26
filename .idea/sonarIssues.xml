@@ -63,6 +63,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/MyBenchmark.java">
           <value>
             <set />
@@ -179,6 +184,71 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_25_API_GA.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_26_BatchSize.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_27_Params.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_28_BlackholeHelpers.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_29_StatesDAG.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_30_Interrupts.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_31_InfraParams.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_32_BulkWarmup.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_33_SecurityManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_34_SafeLooping.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_35_Profilers.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_36_BranchPrediction.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_37_CacheAccess.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_38_PerInvokeSetup.java">
           <value>
             <set />
           </value>

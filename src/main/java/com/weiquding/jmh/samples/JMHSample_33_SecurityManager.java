@@ -59,6 +59,8 @@ public class JMHSample_33_SecurityManager {
      * Some targeted tests may care about SecurityManager being installed.
      * Since JMH itself needs to do privileged actions, it is not enough
      * to blindly install the SecurityManager, as JMH infrastructure will fail.
+     * 一些目标测试可能会关心是否安装了SecurityManager。
+     * 由于JMH本身需要执行特权操作，盲目安装SecurityManager是不够的，因为JMH基础设施会失败。
      */
 
     /*
@@ -67,6 +69,10 @@ public class JMHSample_33_SecurityManager {
      * with helper methods. One that reads the default JMH security policy (we ship one
      * with JMH), and installs the security manager; another one that makes sure
      * the SecurityManager is not installed.
+     * 在本例中，我们要度量系统的性能。getProperty是否安装了SecurityManager。
+     * 为此，我们有两个带有辅助方法的状态类。
+     * 一个读取默认的JMH安全策略(我们提供一个与JMH)，并安装安全管理器;
+     * 另一个确保SecurityManager没有安装
      *
      * If you need a restricted security policy for the tests, you are advised to
      * get /jmh-security-minimal.policy, that contains the minimal permissions
@@ -75,6 +81,11 @@ public class JMHSample_33_SecurityManager {
      * There is also /jmh-security-minimal-runner.policy, that contains the minimal
      * permissions for the JMH harness to run, if you want to use JVM args to arm
      * the SecurityManager.
+     *
+     * 如果您需要一个受限制的安全策略来进行测试，建议您使用/jmh-security- minimum.policy，
+     * 它包含运行JMH基准测试所需的最小权限，在那里合并新权限，在临时位置生成新策略文件，
+     * 然后加载该策略文件。还有/jmh-security- minimum -runner.policy，
+     * 它包含运行JMH管理的最小权限，如果您想使用JVM参数来武装SecurityManager。
      */
 
     @State(Scope.Benchmark)

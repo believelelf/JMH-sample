@@ -61,11 +61,21 @@ public class JMHSample_31_InfraParams {
      *   - IterationParams: covers the current iteration configuration
      *   - ThreadParams: covers the specifics about threading
      *
+     * 有一种方法可以查询关于当前运行模式的JMH。这是可能的与三个基础设施对象，我们可以要求注入:
+     *  -BenchmarkParams:覆盖基准-全局配置
+     * - IterationParams:覆盖当前的迭代配置
+     * - ThreadParams:覆盖线程的细节
+     *
      * Suppose we want to check how the ConcurrentHashMap scales under different
      * parallelism levels. We can put concurrencyLevel in @Param, but it sometimes
      * inconvenient if, say, we want it to follow the @Threads count. Here is
      * how we can query JMH about how many threads was requested for the current run,
      * and put that into concurrencyLevel argument for CHM constructor.
+     *
+     * 假设我们想要检查ConcurrentHashMap如何在不同的并行度级别下伸缩。
+     * 我们可以将concurrencyLevel放在@Param中，但是有时候不方便，
+     * 比如，我们希望它跟随@Threads计数。下面是我们如何查询JMH关于当前运行请求了多少线程，
+     * 并将其放入CHM构造函数的concurrencyLevel参数中。
      */
 
     static final int THREAD_SLICE = 1000;

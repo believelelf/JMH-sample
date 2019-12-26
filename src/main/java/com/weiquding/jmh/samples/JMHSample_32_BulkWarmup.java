@@ -52,20 +52,29 @@ public class JMHSample_32_BulkWarmup {
 
     /*
      * This is an addendum to JMHSample_12_Forking test.
+     * 这是JMHSample_12_Forking测试的附录。
      *
      * Sometimes you want an opposite configuration: instead of separating the profiles
      * for different benchmarks, you want to mix them together to test the worst-case
      * scenario.
+     *
+     * 有时您需要相反的配置:不是将不同基准的配置文件分开，而是将它们混合在一起测试最坏的情况。
      *
      * JMH has a bulk warmup feature for that: it does the warmups for all the tests
      * first, and then measures them. JMH still forks the JVM for each test, but once the
      * new JVM has started, all the warmups are being run there, before running the
      * measurement. This helps to dodge the type profile skews, as each test is still
      * executed in a different JVM, and we only "mix" the warmup code we want.
+     *
+     * JMH有一个批量的热身功能:它首先对所有的测试进行热身，然后测量它们。
+     * JMH仍然为每个测试分叉JVM，但是一旦新JVM启动，在运行度量之前，
+     * 所有的warmup都在那里运行。这有助于避免类型配置文件的倾斜，
+     * 因为每个测试仍然在不同的JVM中执行，我们只“混合”我们想要的预热代码。
      */
 
     /*
      * These test classes are borrowed verbatim from JMHSample_12_Forking.
+     * 这些测试类是从JMHSample_12_Forking中逐字借用的。
      */
 
     public interface Counter {
@@ -97,6 +106,8 @@ public class JMHSample_32_BulkWarmup {
      * And this is our test payload. Notice we have to break the inlining of the payload,
      * so that in could not be inlined in either measure_c1() or measure_c2() below, and
      * specialized for that only call.
+     * 这是我们的测试载荷。请注意，我们必须打破负载的内联，
+     * 这样in就不能内联到下面的measure_c1()或measure_c2()中，并且专门针对那个调用。
      */
 
     @CompilerControl(CompilerControl.Mode.DONT_INLINE)

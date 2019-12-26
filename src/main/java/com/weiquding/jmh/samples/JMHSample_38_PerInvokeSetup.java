@@ -49,10 +49,12 @@ public class JMHSample_38_PerInvokeSetup {
 
     /*
      * This example highlights the usual mistake in non-steady-state benchmarks.
+     * 这个例子突出了非稳态基准测试中常见的错误。
      *
      * Suppose we want to test how long it takes to bubble sort an array. Naively,
      * we could make the test that populates an array with random (unsorted) values,
      * and calls sort on it over and over again:
+     * 假设我们要测试冒泡排序一个数组需要多长时间。天真的是，我们可以做一个测试，用随机(未排序的)值填充一个数组，并一次又一次地调用sort:
      */
 
     private void bubbleSort(byte[] b) {
@@ -98,9 +100,12 @@ public class JMHSample_38_PerInvokeSetup {
      * The method above is subtly wrong: it sorts the random array on the first invocation
      * only. Every subsequent call will "sort" the already sorted array. With bubble sort,
      * that operation would be significantly faster!
+     * 上面的方法稍有错误:它只在第一次调用时对随机数组排序。
+     * 每个后续调用都将对已经排序的数组进行“排序”。使用冒泡排序，该操作将显著加快!
      *
      * This is how we might *try* to measure it right by making a copy in Level.Invocation
      * setup. However, this is susceptible to the problems described in Level.Invocation
+     * 这就是我们如何“尝试”通过在关卡中复制一个副本来衡量它是否正确的方法。调用设置。但是，这容易出现在level . invoke中描述的问题
      * Javadocs, READ AND UNDERSTAND THOSE DOCS BEFORE USING THIS APPROACH.
      */
 
@@ -124,6 +129,8 @@ public class JMHSample_38_PerInvokeSetup {
      * In an overwhelming majority of cases, the only sensible thing to do is to suck up
      * the per-invocation setup costs into a benchmark itself. This work well in practice,
      * especially when the payload costs dominate the setup costs.
+     * 在绝大多数情况下，唯一明智的做法是将每次调用的设置成本吸收到基准测试中。
+     * 这在实践中效果很好，特别是当有效载荷成本占安装成本时。
      */
 
     @Benchmark

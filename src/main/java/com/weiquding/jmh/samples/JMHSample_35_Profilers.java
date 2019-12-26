@@ -33,7 +33,6 @@ package com.weiquding.jmh.samples;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 import org.openjdk.jmh.profile.ClassloaderProfiler;
-import org.openjdk.jmh.profile.DTraceAsmProfiler;
 import org.openjdk.jmh.profile.LinuxPerfProfiler;
 import org.openjdk.jmh.profile.StackProfiler;
 import org.openjdk.jmh.runner.Runner;
@@ -53,20 +52,32 @@ public class JMHSample_35_Profilers {
 
     /*
      * This sample serves as the profiler overview.
+     * 这个示例作为概要文件
      *
      * JMH has a few very handy profilers that help to understand your benchmarks. While
      * these profilers are not the substitute for full-fledged external profilers, in many
      * cases, these are handy to quickly dig into the benchmark behavior. When you are
      * doing many cycles of tuning up the benchmark code itself, it is important to have
      * a quick turnaround for the results.
+     * JMH有一些非常方便的分析器，可以帮助您理解基准测试。
+     * 虽然这些分析器并不能代替成熟的外部分析器，
+     * 但是在很多情况下，它们对于快速深入到基准行为中是很方便的。
+     * 当您要对基准代码本身进行许多周期的调优时，对结果进行快速调整是很重要的。
      *
      * Use -lprof to list the profilers. There are quite a few profilers, and this sample
      * would expand on a handful of most useful ones. Many profilers have their own options,
      * usually accessible via -prof <profiler-name>:help.
+     *使用-lprof列出分析器。有相当多的剖析器，本示例将扩展一些最有用的剖析器。
+     * 许多分析器都有自己的选项，
+     * 通常可以通过-prof <profiler-name>:help来访问。
      *
      * Since profilers are reporting on different things, it is hard to construct a single
      * benchmark sample that will show all profilers in action. Therefore, we have a couple
      * of benchmarks in this sample.
+     *
+     * 由于profiler报告的是不同的内容，
+     * 因此很难构造一个单独的基准示例来显示所有的profiler。
+     * 因此，我们在这个示例中有两个基准测试。
      */
 
     /*
