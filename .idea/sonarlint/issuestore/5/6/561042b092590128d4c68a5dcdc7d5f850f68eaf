@@ -1,0 +1,5 @@
+
+\squid:HiddenFieldCheckB"5Rename "x" which hides the field declared at line 42.(õû˜Áúÿÿÿÿ
+jsquid:S00101("MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(œò—þùÿÿÿÿ
+Bsquid:S1481B"&Remove this unused "x" local variable.(õû˜Áúÿÿÿÿ
+Lsquid:S1854C"5Remove this useless assignment to local variable "x".(Ý–›ñ

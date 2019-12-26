@@ -1,0 +1,12 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,com/weiquding/jmh/samples/JMHSample_01_HelloWorld.wellHelloThere
+inline,com/weiquding/jmh/samples/JMHSample_02_BenchmarkModes.measureAll
+inline,com/weiquding/jmh/samples/JMHSample_02_BenchmarkModes.measureAvgTime
+inline,com/weiquding/jmh/samples/JMHSample_02_BenchmarkModes.measureMultiple
+inline,com/weiquding/jmh/samples/JMHSample_02_BenchmarkModes.measureSamples
+inline,com/weiquding/jmh/samples/JMHSample_02_BenchmarkModes.measureSingleShot
+inline,com/weiquding/jmh/samples/JMHSample_02_BenchmarkModes.measureThroughput

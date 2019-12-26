@@ -1,0 +1,14 @@
+
+xsquid:S1210ú"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(ä¬¯™8«½µã-
+\
+squid:S106…"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8«½µã-
+V
+squid:S106~"9Replace this use of System.out or System.err by a logger.(—™ş8«½µã-
+;squid:S2757¶"Was "-=" meant instead?(Ùªùæıÿÿÿÿ8«½µã-
+[
+squid:S106o"9Replace this use of System.out or System.err by a logger.(“œ™¯ùÿÿÿÿ8«½µã-
+V
+squid:S106x"9Replace this use of System.out or System.err by a logger.(”òÏæ8«½µã-
+esquid:S001012"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(äÑª©
+[
+squid:S106w"9Replace this use of System.out or System.err by a logger.(™çšùÿÿÿÿ8ù˜½µã-

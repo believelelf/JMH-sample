@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AlgorithmsSedgewick-Exercises/src/main/java/com/weiquding/algorithmsSedgewick/fundamentals/Vector.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AlgorithmsSedgewick-Exercises/src/main/java/com/weiquding/algorithmsSedgewick/fundamentals/Visitor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../PDF2Image/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../PDF2Image/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../PDF2Image/src/main/java/com/weiquding/PDF2Image/PDF2IMAGE.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../PDF2Image/src/main/java/com/weiquding/PDF2Image/PDF2Image.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../PDF2Image/src/main/java/com/weiquding/PDF2Image/s.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../PDF2Image/src/main/java/org/apache/pdfbox/pdmodel/font/FontMapperImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../PDF2Image/src/main/java/org/apache/pdfbox/pdmodel/font/s.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../PDF2Image/src/main/resources/log4j2.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../PDF2Image/target/classes/com/weiquding/PDF2Image/PDF2Image.class">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/MyBenchmark.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_01_HelloWorld.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_02_BenchmarkModes.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_03_States.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_04_DefaultState.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_05_StateFixtures.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_06_FixtureLevel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_07_FixtureLevelInvocation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_08_DeadCode.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_09_Blackholes.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_10_ConstantFold.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_11_Loops.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_12_Forking.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_13_RunToRun.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_15_Asymmetric.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_16_CompilerControl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_17_SyncIterations.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_18_Control.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_20_Annotations.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_21_ConsumeCPU.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_22_FalseSharing.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_23_AuxCounters.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_24_Inheritance.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/weiquding/jmh/samples/JMHSample_25_API_GA.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

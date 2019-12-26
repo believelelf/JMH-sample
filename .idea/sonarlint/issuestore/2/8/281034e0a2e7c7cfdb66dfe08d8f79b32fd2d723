@@ -1,0 +1,6 @@
+
+asquid:S1192O"JDefine a constant instead of duplicating this literal "something" 3 times.(ÇÏÏÃ
+zsquid:S4144W"^Update this method so that its implementation is not identical to "measureWrong_1" on line 78.(ˆùÎÎşÿÿÿÿ
+esquid:S001013"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(…’§†
+ksquid:S00100N"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øü‚øÿÿÿÿ
+ksquid:S00100W"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆùÎÎşÿÿÿÿ

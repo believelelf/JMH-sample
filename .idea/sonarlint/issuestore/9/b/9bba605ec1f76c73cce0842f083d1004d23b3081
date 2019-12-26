@@ -1,0 +1,5 @@
+
+esquid:S001013"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.( ØåÏ
+ˆ"squid:ClassVariableVisibilityCheckE"UMake sleepTime a static final constant or non-public and provide accessors if needed.(ÇõÉøÿÿÿÿ
+ksquid:S00100Y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶¢²•ùÿÿÿÿ
+fsquid:S00100_"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Óƒé
